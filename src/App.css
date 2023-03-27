@@ -36,3 +36,72 @@
     transform: rotate(360deg);
   }
 }
+
+.td-left {
+ text-align: left;
+ padding-left: 21%;
+ border-bottom: 1px solid lightblue;
+
+}
+
+.td-right {
+  text-align: left;
+ padding-left: 12%;
+ border-bottom: 1px solid lightblue;
+}
+
+.td-leftContainer {
+  padding: 10px;
+ 
+}
+
+.iconImg {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  padding-left: 15px;
+}
+
+.exchangeName {
+  text-decoration: none;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.pagination {
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.paginationButton{
+  min-width: 200px;
+  height: 40px;
+  margin-left: 15px;
+  border-radius: 50px;
+  border: 1px solid lightblue;
+  background-color: white;
+}
+
+.paginationButton-active {
+  min-width: 200px;
+  height: 40px;
+  margin-left: 15px;
+  border-radius: 50px;
+  border: 1px solid lightblue;
+  background-color: #4486d7;
+  color: #fff
+
+}
+
+.paginationIndex{
+  margin-left: 15px;
+  background-color: #fff;
+  border: none;
+}
+
+.paginationIndex-active{
+  margin-left: 15px;
+  background-color: #4486d7;
+  border: none;
+}
