@@ -10,7 +10,7 @@ function App() {
   const syncExchangeData = async () => {
     try {
       setLoading(true)
-      fetch("http://localhost:8080/api/v1/user/exchange-sync")
+      fetch("https://codinova-db.onrender.com/api/v1/user/exchange-sync")
       .then((response)=>{
         if(response.status===200){
           return response.json()
@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `http://localhost:8080/api/v1/user/exchange-list?name=${params.name}&pageNumber=${params.pageNumber}&limit=${params.limit}`
+      `https://codinova-db.onrender.com/api/v1/user/exchange-list?name=${params.name}&pageNumber=${params.pageNumber}&limit=${params.limit}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -55,7 +55,7 @@ function App() {
     if (type === "prev") {
       setActiveBtn({ prev: true, next: false });
       fetch(
-        `http://localhost:8080/api/v1/user/exchange-list?name=${params.name}&pageNumber=${page}&limit=${params.limit}`
+        `https://codinova-db.onrender.com/api/v1/user/exchange-list?name=${params.name}&pageNumber=${page}&limit=${params.limit}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -71,7 +71,7 @@ function App() {
     } else if (type === "next") {
       setActiveBtn({ next: true, prev: false });
       fetch(
-        `http://localhost:8080/api/v1/user/exchange-list?name=${params.name}&pageNumber=${page}&limit=${params.limit}`
+        `https://codinova-db.onrender.com/api/v1/user/exchange-list?name=${params.name}&pageNumber=${page}&limit=${params.limit}`
       )
         .then((response) => response.json())
         .then((data) => {
