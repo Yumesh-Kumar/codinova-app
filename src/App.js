@@ -128,7 +128,9 @@ if(loading)  return <Loader/>
               type="text"
               placeholder="Find an exchange"
               style={{ border: "none", outline: "none", padding: "10px", width: "50%" }}
-              onChange={(e) => setParams({ name: e.target.value })}
+              onChange={(e) => setParams((pre) => {
+                return { ...pre, name: e.target.value };
+              })}
             />
             <div style={{ height: "30px", width: "30px", padding: "10px" }}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -159,7 +161,7 @@ if(loading)  return <Loader/>
               <th className="td-right">24H TRADE VOLUME</th>
             </thead>
             <tbody>
-              {exchanges.length ? (
+              {exchanges?.length ? (
                 exchanges.map((exchange, i) => {
                   return (
                     <tr key={i + ""}>
